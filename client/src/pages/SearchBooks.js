@@ -66,6 +66,7 @@ const SearchBooks = () => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
+      console.log("Not Authorized")
       return false;
     }
 
@@ -73,7 +74,7 @@ const SearchBooks = () => {
       const { data } = await saveBook({
         variables: { input: bookToSave }
       });
-
+      console.log(data);
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
     } catch (err) {

@@ -9,10 +9,16 @@ import { REMOVE_BOOK } from "../utils/mutations";
 
 const SavedBooks = () => {
 
-  const { loading, data } = useQuery(GET_ME);
-  const [removeBook, {error} ] = useMutation(REMOVE_BOOK);
+  const { loading, error, data } = useQuery(GET_ME);
+  const [removeBook] = useMutation(REMOVE_BOOK);
 
-  const userData = data?.me || [];
+
+  console.log(data);
+
+  const userData = data?.me || {}
+
+
+  console.log(userData)
 
   const handleDeleteBook = async (bookId) => {
 
@@ -27,6 +33,12 @@ const SavedBooks = () => {
         variables: { bookId }
       });
 
+      console.log(data);
+      
+      if(error) {
+        throw new Error("Something went wrong!");
+      }
+
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
@@ -36,7 +48,6 @@ const SavedBooks = () => {
   if(loading) {
     return <h2>LOADING...</h2>;
   }
-
   return (
     <>
       <Jumbotron fluid className='text-light bg-dark'>
