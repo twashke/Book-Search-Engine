@@ -4,7 +4,7 @@
 
 ## Description
 
-The [Book Search Engine](https://booksearchengine0821.herokuapp.com/) application was built utilizing the MERN stack with [MongoDB](https://www.mongodb.com/), [Express](https://www.npmjs.com/package/express), [React](https://www.npmjs.com/package/create-react-app) and [Node.js](https://nodejs.org/en/). Using the [Google Books API](https://developers.google.com/books) the application uses [graphql](https://graphql.org/) and [Apollo Server](https://www.apollographql.com/docs/) instead of a RESTful API. The user can **Sign Up** or **Login** to add books to their profile. They also have the ability to view saved books and delete books. Once logged out, the user will need to log back in to view their profile.
+The [Book Search Engine](https://booksearchengine0821.herokuapp.com/) application was built utilizing the MERN stack with [MongoDB](https://www.mongodb.com/), [Express.js](https://expressjs.com/), [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). Using the [Google Books API](https://developers.google.com/books) the application uses [graphql](https://graphql.org/) and [Apollo Server](https://www.apollographql.com/docs/) instead of a RESTful API. The user can **Sign Up** or **Login** to add books to their profile. They also have the ability to view saved books and delete books. Once logged out, the user will need to log back in to view their profile.
 
 ## Table of Contents
 
