@@ -4,6 +4,8 @@
 
 ## Description
 
+The Book Search Engine application was built utilizing the MERN stack with [MongoDB](https://www.mongodb.com/), [Express](https://www.npmjs.com/package/express), [React](https://www.npmjs.com/package/create-react-app) and [Node.js](https://nodejs.org/en/). Using the [Google Books API](https://developers.google.com/books) the application uses [graphql](https://graphql.org/) and [Apollo Server](https://www.apollographql.com/docs/) instead of a RESTful API. The user can **Sign Up** or **Login** to add books to their profile. They also have the ability to view saved books and delete books. Once logged out, the user will need to log back in to view their profile.
+
 ## Table of Contents
 
 - [About the Project](#about-the-project)
@@ -16,51 +18,88 @@
 
 ## About the Project
 
-- This project used code from a working RESTful API and converted it to [graphql]() using an [Apollo Server]().
-- By reconfigering the server folder, the Apollo server was added and the **routes** and **controllers** provided were removed (since they are handled through **graphql** and **Apollo**).
-- In the **server** folder, a [schemas]() folder was added to handle [graphql]() queries and mutations.
-- The **server** and **package.json** files were also updated to add the [Apollo Server]() and dependicies.
-- In the **client** folder, [quieries.js]() and [mutations.js]() files were added to the [utils]() folder to handle all [graphql] requests.
-- The **App.js** file was updated to include the **Apollo Provider** to all authorized routes.
-- **Components** and **pages** were updated to include **Apollo** dependicies and query requests.
+- This project used code from a working RESTful API and converted it to [graphql](https://graphql.org/) using an [Apollo Server](https://www.apollographql.com/docs/).
+- By reconfigering the **server** folder, the Apollo server was added and the **routes** and **controllers** provided were removed (since they are now handled through **graphql** and **Apollo**).
+- In the **server** folder, a **schemas** folder was added to handle [graphql](https://graphql.org/) queries and mutations.
+- The **server** and **package.json** files were also updated to add the [Apollo Server](https://www.apollographql.com/docs/) and dependicies.
+- In the **client** folder, **queries.js** and **mutations.js** files were added to the **utils** folder to handle all [graphql](https://graphql.org/) requests.
+- The **App.js** file was updated to include the **Apollo Provider** and **client** to all authorized routes.
+- **Components** and **pages** were updated to include **Apollo** dependicies and query requests and mutations.
+- Cleaned up **API.js** and removed all of the RESTful API code, left only the **serchGoogleBooks function**.
 - Users can **Sign Up** or **Login** to save books to their profile.
-- The user can also delete any previously saved book.
+- Once logged in, the user can delete any previously saved book.
 - Once logged out, the user will have to log back in to save additional books, have access to books saved, or delete saved books.
-- Built with the following technologies:
-  - [create-react-app](https://www.npmjs.com/package/create-react-app)
+- The **server** folder was built with the following technologies:
+
+  - [Express](https://www.npmjs.com/package/express)
+  - [apollo-express-server](https://www.npmjs.com/package/apollo-server-express)
+  - [bcrypt](https://www.npmjs.com/package/bcrypt)
+  - [jwt](https://www.npmjs.com/package/jwt)
+  - [mongoose](https://www.npmjs.com/package/mongoose)
+  - [MongoDB](https://www.mongodb.com/)
+  - [Node.js](https://nodejs.org/en/)
+
+- The **client** folder was built with the following technologies:
+
+  - [React](https://www.npmjs.com/package/create-react-app)
+  - [@apollo/client](https://www.npmjs.com/package/apollo-client)
   - [bootstrap](https://www.npmjs.com/package/bootstrap)
-  - [apollo-express-server]()
-  - [graphql-tag]()
-  - [@apollo/client]()
-  - [jwt]()
-  - [mongoose]()
-  - [express]()
-  - [if-env]()
+  - [graphql-tag](https://www.npmjs.com/package/graphql-tag)
   - [HTML](https://www.w3schools.com/html/), [CSS](https://www.w3.org/Style/CSS/Overview.en.html), and [Javascript](https://www.javascript.com/)
+  - [Google Books API](https://developers.google.com/books)
+  - [Node.js](https://nodejs.org/en/)
+
+- For [Website Deployment](https://booksearchengine0821.herokuapp.com/) the following technologies were used:
+  - [Heroku](https://heroku.com/)
+  - [MongoDB Atlas](https://www.mongodb.com/)
+  - [if-env](https://www.npmjs.com/package/if-env)
 
 ## Installation
 
-- G
-  npm install
+Open [Book Search Engine GitHub Repository](https://github.com/twashke/Book-Search-Engine).
+
+- Use the command line to **git clone**
+- **npm install**
+- **npm run develop** from command line to connect to server and client.
+- Go to [localhost:3000](http://localhost:3000/) for client and [localhost:3001/graphql](http://localhost:3001/graphql) for the server while in development.
 
 ## Usage
 
 - Go to [Deployed Book Search Engine Website](https://booksearchengine0821.herokuapp.com/)
 - **Search for Books** using the input field.
-- **Sign Up** to **Save Books** to your profile.
-- **Login** to add, view or delete books from your profile.
+- **Sign Up** to search and **Save Books** to profile.
+- **Logout** once done.
+- **Login** again to add, view or delete books from profile.
 
-![Book Search Engine]()
+\
+[Book Search Engine](https://booksearchengine0821.herokuapp.com/) Home Page \
+\
+![Book Search Engine Home Page](./images/book-search-engine-home.png)
+
+\
+**View Saved Books** after **Login** \
+\
+![View Saved Books](./images/view-saved-books.png)
+
+\
+**Sign Up** as new user to search and add books \
+\
+![Sign Up](./images/signup.gif)
+
+\
+**Login** to view, add books, and delete books \
+\
+![Login](./images/login.gif)
 
 ## Contributing
 
-- Start code provided, linked to an API.
-- Code was converted to utilize [graphql]() and [Apollo]() rather than the RESTful API code provided.
+- Starter code provided, linked to a RESTful API.
+- Code was converted in both the **client** and **server** folder to utilize [graphql](https://graphql.org/) and an [Apollo Server](https://www.apollographql.com/docs/).
 
 ## Tests
 
 - Testing done throughtout production on local host.
-- Once deployed, tested and fixed any issues.
+- Once deployed, tested again and fixed any issues.
 
 ## License
 
