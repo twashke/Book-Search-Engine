@@ -21,10 +21,19 @@ export const ADD_USER = gql`
                 _id
                 username
                 email
-                
+                bookCount
+                savedBooks {
+                  authors
+                  bookId
+                  image
+                  link
+                  title
+                  description
+                }
+              }
+              token
             }
-        }
-    }
+          }
 `;
 
 export const SAVE_BOOK = gql`
