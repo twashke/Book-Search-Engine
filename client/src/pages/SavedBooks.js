@@ -9,16 +9,14 @@ import { REMOVE_BOOK } from "../utils/mutations";
 
 const SavedBooks = () => {
 
-  const { loading, error, data } = useQuery(GET_ME);
-  const [removeBook] = useMutation(REMOVE_BOOK);
+  const { loading, data } = useQuery(GET_ME);
+  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
 
-  console.log(data);
-
-  const userData = data?.me || {}
+  const userData = data?.me || {};
 
 
-  console.log(userData)
+  const userDataLength = Object.keys(userData).length;
 
   const handleDeleteBook = async (bookId) => {
 
@@ -33,13 +31,8 @@ const SavedBooks = () => {
         variables: { bookId }
       });
 
-      console.log(data);
-      
-      if(error) {
-        throw new Error("Something went wrong!");
-      }
-
       removeBookId(bookId);
+      
     } catch (err) {
       console.error(err);
     }
