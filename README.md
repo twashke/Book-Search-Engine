@@ -56,8 +56,7 @@ The [Book Search Engine](https://booksearchengine0821.herokuapp.com/) applicatio
 
 ## Installation
 
-Open [Book Search Engine GitHub Repository](https://github.com/twashke/Book-Search-Engine).
-
+- Open [Book Search Engine GitHub Repository](https://github.com/twashke/Book-Search-Engine).
 - Use the command line to **git clone**
 - **npm install**
 - **npm run develop** from command line to connect to server and client.
